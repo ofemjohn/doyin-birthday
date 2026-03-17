@@ -1,0 +1,128 @@
+.finale-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.finale-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(196,54,90,0.15) 0%, transparent 60%),
+    radial-gradient(circle at 30% 70%, rgba(212,168,83,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(247,168,196,0.08) 0%, transparent 50%);
+  animation: finaleBg 10s ease-in-out infinite alternate;
+}
+
+@keyframes finaleBg {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+.finale-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2rem;
+  max-width: 750px;
+}
+
+/* Hearts Burst Animation */
+.finale-hearts-burst {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burst-heart {
+  position: absolute;
+  font-size: 1.8rem;
+  animation: heartBurstOrbit 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(196, 54, 90, 0.5));
+}
+
+@keyframes heartBurstOrbit {
+  0%, 100% {
+    transform: rotate(var(--angle)) translateX(30px) scale(0.6);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(var(--angle)) translateX(80px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+.finale-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+.finale-title .accent {
+  background: linear-gradient(135deg, var(--color-rose-light), var(--color-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.finale-text {
+  font-family: var(--font-elegant);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--color-text-secondary);
+  line-height: 2;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.finale-emoji-burst {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.finale-emoji-burst span {
+  animation: emojiBounce 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes emojiBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-12px) scale(1.2); }
+}
+
+.finale-signature {
+  font-family: var(--font-script);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--color-gold-light);
+  line-height: 1.8;
+}
+
+.signature-heart {
+  font-size: 3rem;
+  display: inline-block;
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.2); }
+  60% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .finale-emoji-burst { font-size: 1.5rem; gap: 0.6rem; }
+  .finale-hearts-burst { width: 150px; height: 150px; }
+}

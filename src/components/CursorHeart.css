@@ -1,0 +1,15 @@
+.cursor-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: none;
+}
+
+@media (hover: hover) {
+  .cursor-heart { display: block; }
+  body { cursor: none; }
+  a, button { cursor: none; }
+}

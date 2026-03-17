@@ -1,0 +1,91 @@
+/* ========================================
+   DOYIN'S BIRTHDAY - GLOBAL DESIGN SYSTEM
+   A love letter written in CSS
+   ======================================== */
+
+:root {
+  /* Color Palette - Romantic & Warm */
+  --color-bg-dark: #0a0a0f;
+  --color-bg-deep: #110a14;
+  --color-bg-section: #0e0812;
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  
+  --color-rose: #c4365a;
+  --color-rose-light: #e8527a;
+  --color-rose-dark: #8b1a3a;
+  --color-rose-glow: rgba(196, 54, 90, 0.3);
+  
+  --color-gold: #d4a853;
+  --color-gold-light: #f0cc7a;
+  --color-gold-dark: #a07830;
+  
+  --color-pink: #f7a8c4;
+  --color-pink-soft: #fde4ee;
+  --color-pink-deep: #cc3366;
+  
+  --color-text-primary: #faf0f3;
+  --color-text-secondary: rgba(250, 240, 243, 0.7);
+  --color-text-muted: rgba(250, 240, 243, 0.4);
+  
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-elegant: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Dancing Script', cursive;
+  --font-body: 'Outfit', -apple-system, sans-serif;
+  
+  /* Spacing */
+  --section-padding: clamp(60px, 10vh, 120px);
+  --container-max: 1100px;
+  
+  /* Transitions */
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection {
+  background: rgba(196, 54, 90, 0.4);
+  color: var(--color-text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--color-rose), var(--color-gold));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rose-light);
+}

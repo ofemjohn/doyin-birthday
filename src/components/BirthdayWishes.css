@@ -1,0 +1,52 @@
+.wishes-section {
+  position: relative;
+  background: linear-gradient(180deg, var(--color-bg-dark) 0%, #12080e 100%);
+}
+
+.wishes-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wish-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(212,168,83,0.1);
+  border-radius: 16px;
+  transition: all 0.4s var(--transition-smooth);
+}
+
+.wish-item:hover {
+  background: linear-gradient(135deg, rgba(196,54,90,0.08), rgba(212,168,83,0.04));
+  border-color: rgba(196,54,90,0.2);
+  transform: translateX(8px);
+}
+
+.wish-candle {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  animation: candleFlicker 2s ease-in-out infinite;
+}
+
+@keyframes candleFlicker {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  25% { transform: scale(1.05); filter: brightness(1.2); }
+  75% { transform: scale(0.98); filter: brightness(0.95); }
+}
+
+.wish-item p {
+  font-family: var(--font-elegant);
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .wish-item { padding: 1rem 1.5rem; }
+}

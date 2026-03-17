@@ -1,0 +1,21 @@
+/* ===== APP LEVEL STYLES ===== */
+
+.site-footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--color-bg-dark);
+  border-top: 1px solid rgba(196, 54, 90, 0.1);
+}
+
+.site-footer p {
+  font-family: var(--font-elegant);
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+.footer-sub {
+  font-size: 0.9rem !important;
+  color: var(--color-text-muted) !important;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
