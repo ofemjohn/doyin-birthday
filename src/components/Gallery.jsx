@@ -21,8 +21,24 @@ const media = [
     caption: 'Stunning ✨' 
   },
   { 
+    src: '/open-arms.jpg',
+    caption: 'Living Free 🌊' 
+  },
+  { 
     src: '/doyin-3.jpg',
     caption: 'Birthday Girl 🎂' 
+  },
+  { 
+    src: '/morroco1.jpg',
+    caption: 'All The Colours 🌈' 
+  },
+  { 
+    src: '/morroco2.jpg',
+    caption: 'Beautiful Out There 🌿' 
+  },
+  { 
+    src: '/morroco3.jpg',
+    caption: 'Squad Goals 💫' 
   }
 ]
 

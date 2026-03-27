@@ -6,6 +6,7 @@ import MusicToggle from './components/MusicToggle'
 import HeroSection from './components/HeroSection'
 import LoveLetter from './components/LoveLetter'
 import Gallery from './components/Gallery'
+import BirthdayDinner from './components/BirthdayDinner'
 import Reasons from './components/Reasons'
 import BirthdayWishes from './components/BirthdayWishes'
 import Finale from './components/Finale'
@@ -55,6 +56,7 @@ function App() {
             <Countdown />
             <LoveLetter />
             <Gallery />
+            <BirthdayDinner />
             <Reasons />
             <BirthdayWishes />
             <Finale />
