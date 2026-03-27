@@ -30,9 +30,6 @@
   animation: scrollCarousel 30s linear infinite;
 }
 
-.gallery-track:hover {
-  animation-play-state: paused;
-}
 
 @keyframes scrollCarousel {
   from { transform: translateX(0); }
